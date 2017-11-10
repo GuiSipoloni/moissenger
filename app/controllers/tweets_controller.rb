@@ -28,4 +28,8 @@ class TweetsController < ApplicationController
     @tweet = Tweet.order("created_at DESC").all
     redirect_to action: :index
   end
+
+  def display
+    @tweet = Tweet.order("created_at DESC").limit(5)
+  end
 end

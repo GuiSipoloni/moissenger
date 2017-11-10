@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     get "users/auth/google_oauth2" => "devise/sessions#new"
   end
 
+  get "tweets/display" => "tweets#display"
+
   resources :tweets
   resources :users
 end
