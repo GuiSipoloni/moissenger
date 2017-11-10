@@ -19,6 +19,7 @@
           <ul>
             <li><%= link_to fa_icon("commenting", text: "Nova Mensagem"), new_tweet_path %></li>
             <li><%= link_to fa_icon("users", text: "Listar usuários"), users_path %></li>
+            <li><%= link_to fa_icon("fullscreen", text: "Display"), tweets_display_path %></li>
             <% if current_user.present? && current_user.id.present? %>
               <li><%= link_to fa_icon("user-circle", text: "Editar Perfil"), edit_user_path(current_user.id) %></li>
             <% end %>
