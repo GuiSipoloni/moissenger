@@ -5,9 +5,10 @@ default: &default
   timeout: 5000
 
 development:
-    adapter: postgresql
-    database: postgres
-    host: localhost
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/test.sqlite3
 
 test:
   adapter: sqlite3
